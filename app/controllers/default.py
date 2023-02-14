@@ -1,5 +1,5 @@
-# from app.pages import Pages
-# from app import app
+from app.pages import Pages
+from app import app
 from flask import render_template
 from flask import redirect
 from flask import url_for
@@ -11,6 +11,13 @@ try:
     password = str(input(f"{Fore.LIGHTBLACK_EX}password > "))
     with open('data.json', 'w') as data:
         data = data.write('{ "username": "%s", "password": "%s" }'%(name, password))
+except KeyboardInterrupt as e:
+    print(f"{Fore.LIGHTRED_EX}Error {e}")
 
-except:
-    pass
+
+config = Pages(name, password)
+
+
+@app.route('/')
+def home():
+    return config.homep()
