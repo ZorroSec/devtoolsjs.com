@@ -12,3 +12,9 @@ Folder     |     Files
 Dependencie    |    install
 -------------- | ----------
 `Express`   |   npm install express --save
+
+## Dependencies for flask
+Dependencie    |    install
+-------------- | ----------
+`flask`   |   pip install flask
+`colorama`   |    pip install colorama
