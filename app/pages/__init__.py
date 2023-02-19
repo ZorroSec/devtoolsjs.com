@@ -10,4 +10,4 @@ class Pages:
         self.password = password
     
     def homep(self):
-        return render_template('pyIndex.html')
+        return render_template('iindx.html')
