@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
     <title>DevToolsPy - Login</title>
 </head>
 <body>
@@ -15,19 +16,17 @@
             <div class="link">
                 <a href="/">home</a>
             </div>
-        </div>
-        <div class="user">
-            <!-- <h5>{{ user }}</h5> -->
+            <h3>{{ user }}</h3>
         </div>
 
     </header>
     <section class="login">
         <form method="post">
             <div class="input-user">
-                <input type="text" id="user" placeholder="Username...">
+                <input type="text" name="name" id="user" placeholder="Username...">
             </div>
             <div class="input-pass">
-                <input type="text" id="pass" placeholder="Password...">
+                <input type="text" name="pass" id="pass" placeholder="Password...">
             </div>
             <div class="btn">    
                 <button type="reset">

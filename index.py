@@ -1,4 +1,3 @@
-from app.pages import Pages
 from app import app
 from flask import render_template
 from flask import redirect
