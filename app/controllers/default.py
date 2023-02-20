@@ -8,7 +8,9 @@ from json import loads, load, dump
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    return render_template('iindx.html', user='zorro')
+    with open('data.json', 'r') as f:
+        data = load(f)
+    return render_template('iindx.html', user=data['username'])
 
 
 
