@@ -10,8 +10,21 @@ from json import loads, load, dump
 def home():
     return render_template('iindx.html', user='zorro')
 
-@app.route('/login', methods=['GET', 'POST'])
+
+
+@app.route('/login', methods=['GET','POST'])
 def login():
-    name = request.form.get('name')
-    password = request.form.get('password')
-    return render_template('login.html', user=name)
+    if request.method == 'POST':
+        name = request.form.get('name')
+        password = request.form.get('pass')
+        with open('data.json', 'w') as f:
+            dump(
+                {
+                    "username": f"{name}",
+                    "password": f"{password}"
+                },
+                f
+            )
+        return render_template('login.html', user=name)
+    
+    return render_template('login.html')
